@@ -31,7 +31,7 @@
     transition: height 0.5s ease, background 0.3s ease;
   }
 
-  .bar:not(.active) {
+  .bar:not(.active):not(.small) {
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
   }

@@ -12,7 +12,7 @@
   export let duration: number = 2000;  // Set duration in ms
 
   // Use tweened for smooth interpolation of the value
-  let dynamicValue = tweened(value ? value : min);
+  let dynamicValue = tweened(dynamic ? value : min);
   let direction = 1;
 
   let width: number;
@@ -101,7 +101,7 @@
   <div>
     <div class="bar-chart">
       {#each bars as _, index}
-        <Bar status={barStatus(index, $dynamicValue)} small={width < 320} />
+        <Bar status={barStatus(index, $dynamicValue)} small={width <= 320} />
       {/each}
     </div>
   </div>
